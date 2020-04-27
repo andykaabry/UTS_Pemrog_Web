@@ -1,0 +1,24 @@
+{
+  "name": "uts_pemrog_web",
+  "version": "1.0.0",
+  "description": "UTS Pemrograman Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andykaabry/UTS_Pemrog_Web.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "Andika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andykaabry/UTS_Pemrog_Web/issues"
+  },
+  "homepage": "https://github.com/andykaabry/UTS_Pemrog_Web#readme"
+}
