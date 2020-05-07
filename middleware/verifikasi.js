@@ -3,8 +3,8 @@ const config = require('../config/secret');
 
 function verifikasi(){
     return function(req, rest, next){
-        var role = req.body.role;
-        //cek authorizzation header
+        var level = req.body.level;
+        //cek authorization header
         var tokenWithBearer = req.headers.authorization;
         if(tokenWithBearer) {
             var token = tokenWithBearer.split(' ')[1];
@@ -14,11 +14,15 @@ function verifikasi(){
                 if(err){
                     return rest.status(401).send({auth:false, message:'Token tidak terdaftar!'});
                 }else {
-                    if(role == 2){
+                    if(level == 2){
+                        req.auth = decoded;
+                        next();
+                    }
+                    else if(level == 1){
                         req.auth = decoded;
                         next();
                     }else {
-                        return rest.status(401).send({auth:false, message:'Gagal mengotorisasi role anda!'});
+                        return rest.status(401).send({auth:false, message:'Gagal mengotorisasi level anda!'});
                     }
                 }
             });
@@ -27,5 +31,6 @@ function verifikasi(){
         }
     }
 }
+
 
 module.exports = verifikasi; 
