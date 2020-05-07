@@ -14,6 +14,8 @@ router.post('/api/v1/inputservis', verifikasi(), auth.inputservis);
 router.post('/api/v1/inputmontir', verifikasi(), auth.inputmontir);
 router.post('/api/v1/inputsparepart', verifikasi(), auth.inputsparepart);
 router.post('/api/v1/inputuser',verifikasi(), auth.registrasi);
+router.post('/api/v1/inputlevel',verifikasi(), auth.inputlevel);
+
 
 
 
