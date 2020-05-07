@@ -13,6 +13,8 @@ router.get('/api/v1/rahasia1', verifikasi(), auth.halamanrahasia1)
 router.post('/api/v1/inputservis', verifikasi(), auth.inputservis);
 router.post('/api/v1/inputmontir', verifikasi(), auth.inputmontir);
 router.post('/api/v1/inputsparepart', verifikasi(), auth.inputsparepart);
+router.post('/api/v1/inputuser',verifikasi(), auth.registrasi);
+
 
 
 module.exports = router;
