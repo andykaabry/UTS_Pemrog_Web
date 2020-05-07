@@ -6,10 +6,10 @@ var verifikasi = require('./verifikasi');
 //daftarkan menu registrasi
 router.post('/api/v1/register', auth.registrasi);
 router.post('/api/v1/login', auth.login);
-router.post('/api/v1/inputservis', auth.inputservis);
 
 //alamat yang perlu otorisasi
 router.get('/api/v1/rahasia', verifikasi(), auth.halamanrahasia);
+router.post('/api/v1/inputservis', verifikasi(), auth.inputservis);
 
 
 module.exports = router;

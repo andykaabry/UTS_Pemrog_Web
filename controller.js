@@ -149,4 +149,4 @@ exports.hapusSparepart = function (req, res) {
                  response.ok("Berhasil hapus data",res)
              }
          });
- }; 
+ };
