@@ -24,6 +24,12 @@ router.put('/api/v1/ubahuser',verifikasiadmin(), auth.ubahuser);
 router.put('/api/v1/ubahlevel',verifikasiadmin(), auth.ubahlevel);
 router.put('/api/v1/ubahservis',verifikasiadmin(), auth.ubahservis);
 
+router.delete('/api/v1/hapusmontir',verifikasiadmin(), auth.hapusmontir);
+router.delete('/api/v1/hapussparepart',verifikasiadmin(), auth.hapussparepart);
+router.delete('/api/v1/hapususer',verifikasiadmin(), auth.hapususer);
+router.delete('/api/v1/hapuslevel',verifikasiadmin(), auth.hapuslevel);
+router.delete('/api/v1/hapusservis',verifikasiadmin(), auth.hapusservis);
+
 
 
 
