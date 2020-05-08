@@ -5,7 +5,7 @@ var verifikasiadmin = require('./verifikasi');
 var verifikasipengguna = require('./verifikasi');
 
 //daftarkan menu registrasi
-router.post('/api/v1/register', auth.registrasi);
+router.post('/api/v1/register',verifikasipengguna(), auth.registrasi);
 router.post('/api/v1/login', auth.login);
 
 //alamat yang perlu otorisasi
@@ -16,8 +16,13 @@ router.post('/api/v1/inputservis',verifikasiadmin(), auth.inputservis);
 router.post('/api/v1/inputservis',verifikasipengguna(), auth.inputservis);
 router.post('/api/v1/inputmontir',verifikasiadmin(), auth.inputmontir);
 router.post('/api/v1/inputsparepart',verifikasiadmin(), auth.inputsparepart);
-router.post('/api/v1/register',verifikasipengguna(), auth.registrasi);
 router.post('/api/v1/inputlevel',verifikasiadmin(), auth.inputlevel);
+
+router.put('/api/v1/ubahmontir',verifikasiadmin(), auth.ubahmontir);
+router.put('/api/v1/ubahsparepart',verifikasiadmin(), auth.ubahsparepart);
+router.put('/api/v1/ubahuser',verifikasiadmin(), auth.ubahuser);
+router.put('/api/v1/ubahlevel',verifikasiadmin(), auth.ubahlevel);
+router.put('/api/v1/ubahservis',verifikasiadmin(), auth.ubahservis);
 
 
 
