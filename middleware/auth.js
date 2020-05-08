@@ -93,14 +93,14 @@ exports.login = function (req,res){
 };
 
 exports.halamanrahasia = function(req, res){
-    response.ok("Halaman ini hanya untuk user dengan role = 2!",res);
+    response.ok("Halaman ini hanya untuk user dengan level = 2 (Pelanggan)!",res);
 }
 
 exports.halamanrahasia1 = function(req,res){
-    response.ok("Halaman ini hanya untuk user dengan role = 1 !",res);
+    response.ok("Halaman ini hanya untuk user dengan level = 1 (Admin) !",res);
 } 
 
-//controller untuk input data servis
+//controller untuk input data servis dapat menggunakan level 1 atau level 2
 exports.inputservis = function(req, res) {
     var post = {
         tgl_servis: new Date(),
