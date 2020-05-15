@@ -36,6 +36,4 @@ module.exports = function(app) {
     app.route('/hapussparepart')
         .delete(jsonku.hapusSparepart);
 
-    app.route('/hitungtotal')
-        .get(jsonku.hitungtotal);
 }

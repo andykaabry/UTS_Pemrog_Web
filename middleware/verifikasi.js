@@ -27,7 +27,7 @@ function verifikasiadmin(){
         }
 }
     
-function verifikasipengguna(){
+function verifikasipelanggan(){
         return function(req, rest, next){
             var level = req.body.level;
             //cek authorization header
@@ -55,4 +55,4 @@ function verifikasipengguna(){
 }
     
 module.exports = verifikasiadmin;
-module.exports = verifikasipengguna; 
+module.exports = verifikasipelanggan; 
